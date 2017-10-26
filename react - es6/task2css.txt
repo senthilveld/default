@@ -1,0 +1,19 @@
+.cartbutton {
+float:right;
+background-color:#A9A9A9;
+}
+.fruit{
+color:		#00008B;
+}
+
+.description{
+color:#0000FF;
+font-style: italic;
+}
+.mrp{
+font-size:20px;
+color:red;
+}
+.checked{
+color:#6495ED;
+}

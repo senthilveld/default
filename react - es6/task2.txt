@@ -1,0 +1,81 @@
+const fruits = {
+    Apple: {
+        fruitspic:"http://natureandnutrition.com/wp-content/uploads/2015/04/Health-Benefits-of-Apples-Red-Apple.jpg",
+        name:"Apple",
+        description:"The apple tree is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple",
+        mrp: 120 
+    },
+    Papaya: {
+       fruitspic:"https://www.organicfacts.net/wp-content/uploads/2013/05/Papaya2-1020x765.jpg",
+        name:"Papaya",
+        description:"The papaya is a small, sparsely branched tree, usually with a single stem growing from 5 to 10 m (16 to 33 ft) tall, with spirally arranged leaves confined to the top of the trunk",
+        mrp: 110
+    },
+    strawberry: {
+       fruitspic:"http://healthyrise.com/wp-content/uploads/2016/09/Strawberry-10.jpg",
+        name:" Strawberry",
+        description:"The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries",
+        mrp: 100 
+   },
+  grape: {
+       fruitspic:"http://liquiddemon.co.uk/image/cache/catalog/purple-grapes-500x500.jpg",
+        name:"Grape",
+        description:"A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis.",
+        mrp: 120 
+   },
+  Pineapple: {
+        fruitspic:"https://www.organicfacts.net/wp-content/uploads/2013/06/Pineapple.jpg",
+        name:"Pineapple",
+        description:"The pineapple (Ananas comosus) is a tropical plant with an edible multiple fruit consisting of coalesced berries, also called pineapples,[2][3] and the most economically significant plant in the Bromeliaceae family.",
+        mrp: 140 
+   },
+   
+   
+}
+
+class App extends React.Component{
+
+Showfruits(){
+    return Object.keys(fruits).map(favfruits => {
+        return (
+            <div>
+                <table>
+                 <tr>
+                   <img  src= {fruits[favfruits].fruitspic}  height="200" weight="200" />
+                 </tr>
+                 <tr>
+                   <h3 className="fruit">{fruits[favfruits].name}</h3>
+                   <h6 className="description">{fruits[favfruits].description}</h6>
+                </tr>
+                <tr>
+                   <td> <b> MRP: </b>INR <span className="mrp"> {fruits[favfruits].mrp}</span> /kg </td>
+                   <td> <button className="cartbutton"><i className="fa fa-shopping-cart"></i>
+                   </button></td>
+                </tr>
+                <tr>
+                   <span className="fruit">Rating:</span>
+                   <span className="fa fa-star checked"></span>
+                   <span className="fa fa-star checked"></span>
+                   <span className="fa fa-star checked"></span>
+                   <span className="fa fa-star checked"></span>
+                   <span className="fa fa-star"></span>
+               </tr>
+             </table>
+          </div>
+        )
+    })
+    
+ }
+
+
+	render(){
+		return(
+			<div>
+        <h1>SHOPPING CART</h1>
+				{this.Showfruits()}
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(<App/>, mountNode)
