@@ -1,0 +1,71 @@
+class App extends React.Component {
+  constructor(props){
+    super();
+    this.state = {
+      message: '',
+      message1:''
+    };
+  }
+  handleChange(e){
+    this.setState({
+      message: e.target.value
+    });
+  }
+  handleChange1(e){
+    this.setState({
+      message1: e.target.value
+    });
+  }
+  
+  add= () => {
+  
+  alert(+this.state.message + +this.state.message1);
+  }
+  
+   sub= () => {
+ 
+  alert(this.state.message - this.state.message1);
+  }
+  mul= () => {
+  
+  alert(this.state.message * this.state.message1);
+  }
+  div= () => {
+  
+  alert(this.state.message / this.state.message1);
+  }
+
+ per= () => {
+  
+  alert((this.state.message / this.state.message1)*100);
+  }
+
+  
+  render(){
+    return (
+      <div>
+        <input type="number" placeholder="enter some number!" value={this.state.message}
+          onChange={this.handleChange.bind(this)} />
+          <input type="number" placeholder="enter some numbers!" value={this.state.message1}
+          onChange={this.handleChange1.bind(this)} />
+             
+             <div className="row-2">
+        
+ <input type = "button" value = "Addition"  onClick={this.add} />
+ <input type = "button" value = "Subtraction" onClick ={this.sub}/> 
+  <input type = "button" value = "Multiplication" onClick = {this.mul}/> 
+    <input type = "button" value = "division" onClick = {this.div}/>
+   <input type = "button" value = "percentage" onClick = {this.per} /> 
+</div>
+             
+         <p><h3>{this.state.message}</h3></p>
+        <p><h3>{this.state.message1}</h3></p>
+    </div>
+    );
+  }
+}
+
+
+
+
+ReactDOM.render(<App />, mountNode);
