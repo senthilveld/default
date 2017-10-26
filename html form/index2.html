@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML FORM</title>
+    <link rel="stylesheet" type="text/css" href="style3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
+
+<body>
+  <header>
+    <h1>Welcome to soul-mate....find soul-mate online</h1>
+  </header>
+  <form>
+
+    <fieldset class="bg">
+      <legend>Your Face</legend>
+      <table>
+        <tr>
+          <td>Your Image</td>
+          <td>:</td>
+          <td>
+            <button type="button">Choose File </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Image Preview</td>
+          <td>:</td>
+          <td><img src="msd.jpg">
+          </td>
+        </tr>
+        </tr>
+      </table>
+       
+    </fieldset>
+    <fieldset class="bg">
+      <legend>Your General Details</legend>
+      <table>
+        <tr>
+          <td> Name</td>
+          <td>:</td>
+          <td>
+            <input id="name" type="text" placeholder="Enter Your Name" required pattern="[A-Za-z]+" />
+          </td>
+        </tr>
+        <tr>
+          <td> Gender</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="sex" value="male" size="10">Male
+            <input type="radio" name="sex" value="Female" size="10">Female </td>
+        </tr>
+        <tr>
+          <td> Age</td>
+          <td>:</td>
+          <td>
+            <input type="number" name="Age" min="18" max="40" placeholder="enter your age">
+          </td>
+        </tr>
+        <tr>
+          <td> Date of Birth</td>
+          <td>:</td>
+          <td>
+            <input type="date" name="Age" placeholder="enter your age">
+          </td>
+        </tr>
+        <tr>
+          <td> Favourite Color
+            <td>:</td>
+            <td>
+              <input type="color" name="Age" placeholder="enter your color">
+            </td>
+        </tr>
+        <tr>
+          <td> Which Country</td>
+          <td>:</td>
+          <td>
+            <select name="Which Country">
+              <option value="-1" Select Country>Select Country</option>
+              <option value="B.Tech">India</option>
+              <option value="MCA">Srilanka</option>
+              <option value="MBA">Pakistan</option>
+              <option value="BCA">Bangaladesh</option>
+              <option value="BCA">China</option>
+          </td>
+        </tr>
+        </select>
+      </table>
+    </fieldset>
+    <fieldset class="bg">
+      <legend>Your Indicators</legend>
+      <table>
+        <tr>
+          <td>Height</td>
+          <td>:</td>
+          <td><span>short</span>
+            <input type="range" name="Height" value="Height"> <span>tall</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td>:</td>
+          <td><span>poor</span>
+            <input type="range" name="salary" value="Salary"> <span>rich</span>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset class="bg">
+      <legend>Your Contact Information</legend>
+      <table>
+        <tr>
+          <td> Email</td>
+          <td>:</td>
+          <td>
+            <input id="email" type="email" required/>
+          </td>
+        </tr>
+        <tr>
+          <td> Mobile</td>
+          <td>:</td>
+          <td>
+            <input type="text" name="Mobile" required pattern="[0-9]{10}" />
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>:</td>
+          <td>
+            <textarea rows="3" cols="25"> </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td> Method to Contact you </td>
+          <td>:</td>
+          <td>
+            <input type="checkbox" name="Email" value="Email">Email
+            <input type="checkbox" name="Whatspp" value="Whatsapp">Whatsapp
+            <input type="checkbox" name="In-app chat" value="In-app chat">In-app chat</td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+    <input type="submit" value="submit" onclick="validate()">
+    <script src="script.js"></script>
+  </form>
+</body>
+
+</html>
